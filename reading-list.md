@@ -29,7 +29,7 @@ Books that I especially loved are marked with an asterisk.
 1. **The Song of Achilles** by Madeline Miller\*
 1. **Circe** by Madeline Miller\*
 1. **Dune Messiah** by Frank Herbert
-1. **Dune** by Frank Herbert
+1. **Dune** by Frank Herbert\*
 1. **The Wise Man’s Fear** by Patrick Rothfuss
 1. **Where the Crawdads Sing** by Delia Owens
 1. **The Name of the Wind** by Patrick Rothfuss
