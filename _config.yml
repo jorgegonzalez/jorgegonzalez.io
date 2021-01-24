@@ -1,8 +1,7 @@
 # Site settings
 title: Jorge Gonzalez # site title
 description: >- # site description
-  He's writing in Bahasa about web technology and experience as a journal
-  for documentation things that he learned, meet him <a href="https://github.com/piharpi" target="_blank" rel="noopener">@github</a>.
+  Ramblings and lists.
 lang: en-US # default lang
 timezone: America/New_York # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
@@ -13,18 +12,15 @@ mode: dark # default theme "dark" | "light"
 author:
   name: Jorge Gonzalez # author name
   bio: >- # tell to the world
-    The minimalist Jekyll theme, light and dark mode support, for running a personal site and blog,
-    meet Klisé theme at <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">@github</a>.
-  github: jorgegonzalez # general username
+    Full Stack Software Engineer.
+  github: github.com/jorgegonzalez # general username
   email: your-email@email.com # email adress
-  avatar: /assets/img/avatar.jpg # change with your own avatar
+  avatar: /assets/img/avatar.png # change with your own avatar
 
 # URL settings
-url: "https://klise.now.sh" #
-baseurl:
+url: "https://jorgegonzalez.io" #
+baseurl: /
 permalink: /:title/
-google_analytics: # leave it blank if not wish
-fb_appid:
 
 # Collection setting
 collections:
