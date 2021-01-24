@@ -12,7 +12,7 @@ Books that I especially loved are marked with an asterisk.
 
 ## Currently Reading
 
-- **The Parable of the Talents** by Octavia E. Butler
+- **Parable of the Talents** by Octavia E. Butler
 - **On Immunity: An Inoculation** by Eula Biss
 
 ### 2021
