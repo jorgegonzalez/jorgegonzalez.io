@@ -12,11 +12,12 @@ Books that I especially loved are marked with an asterisk.
 
 ## Currently Reading
 
-- **Parable of the Talents** by Octavia E. Butler
+- **A Gentleman in Moscow** by Amor Towles
 - **On Immunity: An Inoculation** by Eula Biss
 
 ### 2021
 
+1. **Parable of the Talents** by Octavia E. Butler
 1. **Parable of the Sower** by Octavia E. Butler
 
 ### 2020
