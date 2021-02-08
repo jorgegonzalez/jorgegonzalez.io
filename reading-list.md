@@ -12,13 +12,16 @@ Books that I especially loved are marked with an asterisk.
 
 ## Currently Reading
 
-- **A Gentleman in Moscow**, by Amor Towles
+- **Will my Cat Eat My Eyeballs**, by Caitlin Doughty
+- **The Tower of Swallows**, by Andrzej Sapkowski
 - **On Immunity: An Inoculation**, by Eula Biss
+- **Designing Data-Intensive Applications**, by Martin Kleppmann
 
 ### 2021
 
+1. **A Gentleman in Moscow**, by Amor Towles
 1. **Parable of the Talents**, by Octavia E. Butler
-1. **Parable of the Sower**, by Octavia E. Butler
+1. **Parable of the Sower**, by Octavia E. Butler\*
 
 ### 2020
 
