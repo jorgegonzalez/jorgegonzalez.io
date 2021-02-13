@@ -13,11 +13,12 @@ Books that I especially loved are marked with an asterisk.
 ## Currently Reading
 
 - **The Tower of Swallows**, by Andrzej Sapkowski
-- **On Immunity: An Inoculation**, by Eula Biss
 - **Designing Data-Intensive Applications**, by Martin Kleppmann
 
 ### 2021
 
+1. **If You Come Softly**, by Jacqueline Woodson
+1. **On Immunity: An Inoculation**, by Eula Biss
 1. **Will my Cat Eat My Eyeballs**, by Caitlin Doughty
 1. **A Gentleman in Moscow**, by Amor Towles
 1. **Parable of the Talents**, by Octavia E. Butler
@@ -30,7 +31,7 @@ Books that I especially loved are marked with an asterisk.
 1. **Children of Dune**, by Frank Herbert
 1. **Baptism of Fire**, by Andrzej Sapkowski
 1. **Galatea**, by Madeline Miller
-1. **The Song of Achilles**, by Madeline Miller\*
+1. **The Song of Achilles**, by Madeline Miller
 1. **Circe**, by Madeline Miller\*
 1. **Dune Messiah**, by Frank Herbert
 1. **Dune**, by Frank Herbert\*
@@ -39,6 +40,7 @@ Books that I especially loved are marked with an asterisk.
 1. **The Name of the Wind**, by Patrick Rothfuss
 1. **Blonde Roots**, by Bernardine Evaristo\*
 1. **The Time of Contempt**, by Andrzej Sapkowski
+1. **Vox Machina: Origins Volume 1**, by Critical Role
 1. **Blood of Elves**, by Andrzej Sapkowski
 1. **How to be an Antiracist**, by Ibram X. Kendi
 1. **Sword of Destiny**, by Andrzej Sapkowski
@@ -64,6 +66,6 @@ Books that I especially loved are marked with an asterisk.
 1. **Little Fires Everywhere**, by Celeste Ng\*
 1. **Yes We (Still) Can**, by Dan Pfeiffer
 1. **Einstein**, by Walter Isaacson
-1. **Paddle Your Own Canoe** ,by Nick Offerman
+1. **Paddle Your Own Canoe**, by Nick Offerman
 1. **Yes Please**, by Amy Poehler
 1. **Bossypants**, by Tina Fey

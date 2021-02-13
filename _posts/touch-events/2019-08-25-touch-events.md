@@ -5,11 +5,11 @@ date: 2019-08-25
 categories: javascript react
 ---
 
-This is a nice and quick utility I learned recently to support both `TouchEvents` and `MouseEvents` while only worrying about the `onClick` prop.
+This is a small and simple utility I learned recently to allow developers to support both `TouchEvents` and `MouseEvents` on `button` elements, while only worrying about the `onClick` prop. The end result is a button that _feels_ right on both desktop and mobile browsers.
 
 **This probably doesn't support all use cases.**
 
-`getTouchEvents` takes a callback that is invoked (or not) by either the `onClick` or `onTouchStart` handlers, depending on the environment.
+Below `getTouchEvents` takes a callback that is invoked (or not) by either the `onClick` or `onTouchStart` handlers, depending on the environment.
 
 ```js
 function getTouchEvents(callback) {
@@ -19,7 +19,7 @@ function getTouchEvents(callback) {
         onTouchStart: callback,
         onClick: noop,
       };
-    } else {  
+    } else {
       return {
         onTouchStart: noop,
         onClick: callback,
@@ -46,3 +46,5 @@ function App() {
   );
 }
 ```
+
+You will not only notice a different alert message in different environments, but button clicks on mobile now feel much more like native taps.
