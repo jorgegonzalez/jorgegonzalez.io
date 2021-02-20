@@ -12,11 +12,13 @@ Books that I especially loved are marked with an asterisk.
 
 ## Currently Reading
 
-- **The Tower of Swallows**, by Andrzej Sapkowski
+- **The Invisible Life of Addie LaRue**, by V.E. Schwab
 - **Designing Data-Intensive Applications**, by Martin Kleppmann
 
 ### 2021
 
+1. **The Tower of Swallows**, by Andrzej Sapkowski
+1. **A Field Guide to Getting Lost**, by Rebecca Solnit
 1. **If You Come Softly**, by Jacqueline Woodson
 1. **On Immunity: An Inoculation**, by Eula Biss
 1. **Will my Cat Eat My Eyeballs**, by Caitlin Doughty
