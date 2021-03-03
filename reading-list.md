@@ -12,6 +12,8 @@ Books that I especially loved are marked with an asterisk.
 
 ## Currently Reading
 
+- **Severance**, by Ling Ma
+- **Heretics of Dune**, by Frank Herbert
 - **The Invisible Life of Addie LaRue**, by V.E. Schwab
 - **Designing Data-Intensive Applications**, by Martin Kleppmann
 
