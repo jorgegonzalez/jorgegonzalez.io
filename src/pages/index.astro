@@ -1,0 +1,603 @@
+---
+import Base from '../layouts/Base.astro';
+
+const now = [
+  {
+    label: 'Day job',
+    name: 'Rewst',
+    role: 'Engineering Lead',
+    blurb:
+      'Org-wide technical lead — setting engineering direction while staying deep in production reliability, database performance, and feature delivery.',
+    href: 'https://www.rewst.io',
+    cta: 'rewst.io',
+  },
+  {
+    label: 'Studio',
+    name: 'Ginyu',
+    role: 'Founder & builder',
+    blurb:
+      'A boutique software and design studio building thoughtful digital products for niche communities.',
+    href: 'https://www.ginyu.io',
+    cta: 'ginyu.io',
+  },
+  {
+    label: 'Live product',
+    name: 'Probed',
+    role: 'Designer & engineer',
+    blurb:
+      'Direct-to-customer communication for solo founders and creators. One space, real conversations, no tickets.',
+    href: 'https://probed.chat',
+    cta: 'probed.chat',
+  },
+];
+
+const experience = [
+  {
+    company: 'Rewst',
+    role: 'Engineering Lead',
+    progression: 'Senior → Principal → Lead',
+    period: '2022 — Present',
+    blurb:
+      'Built App Builder from concept to GA as sole engineer, designer, and PM, then grew into org-wide technical leadership. Own production reliability across Postgres and Redis, lead the Terraform migration across regions, and ship customer-facing features on a React/TypeScript + Python stack.',
+    stack: ['React', 'TypeScript', 'Python', 'Postgres', 'Redis', 'Terraform'],
+  },
+  {
+    company: 'Walmart Global Tech',
+    role: 'Software Engineer 3',
+    period: '2022',
+    blurb:
+      'Built Interactive Voice Response and chatbot services in F#, using Google DialogFlow CX and the Microsoft Bot Framework.',
+    stack: ['F#', 'DialogFlow CX', 'Bot Framework'],
+  },
+  {
+    company: 'Raft',
+    role: 'Full Stack Engineer',
+    period: '2021 — 2022',
+    blurb:
+      'Shipped features for a React/Django government data submission platform and architected a multi-environment Terraform pipeline to Cloud Foundry.',
+    stack: ['React', 'Django', 'Terraform', 'Cloud Foundry'],
+  },
+  {
+    company: 'Perch Security',
+    role: 'Software Engineer',
+    progression: 'Acquired by ConnectWise',
+    period: '2020 — 2021',
+    blurb:
+      'Built 20+ third-party API integrations for a security platform — effectively doubling available integrations — plus a native .NET logging integration published to the partner marketplace.',
+    stack: ['Node.js', 'Kafka', 'Django', 'React', '.NET'],
+  },
+  {
+    company: 'JPMorgan Chase',
+    role: 'Software Engineer I, II',
+    period: '2018 — 2020',
+    blurb:
+      'Built a data visualization platform for historical usage analytics of financial products with React, Redux, Apollo GraphQL, and Express.',
+    stack: ['React', 'Redux', 'Apollo GraphQL', 'Express'],
+  },
+];
+
+const projects = [
+  {
+    name: 'Probed',
+    blurb:
+      'Discord-inspired direct-to-customer chat platform for solo founders, creators, and support teams.',
+    href: 'https://probed.chat',
+    cta: 'probed.chat',
+    stack: ['Electron', 'React', 'Hono / Bun', 'Drizzle', 'Supabase', 'Stripe'],
+  },
+  {
+    name: 'Roshi',
+    blurb:
+      'A Hebrew calendar iOS app with widgets, Live Activities, and subscriptions — built solo and shipped on the App Store.',
+    href: 'https://www.ginyu.io/roshi',
+    cta: 'ginyu.io/roshi',
+    stack: ['SwiftUI', 'RevenueCat', 'StoreKit 2'],
+  },
+  {
+    name: 'Rewst TCG Server',
+    blurb:
+      'A Slack-driven Rails trading card game — packs, trading, marketplace, duels, and leaderboards — with a fully audited transactional economy.',
+    href: null,
+    cta: null,
+    stack: ['Ruby on Rails', 'Supabase', 'Fly.io', 'SolidQueue'],
+  },
+];
+
+const skills = [
+  {
+    title: 'Languages & Frameworks',
+    items: ['TypeScript', 'Python', 'JavaScript', 'Ruby / Rails', 'Swift / SwiftUI', 'F#', 'Go', 'React', 'Node.js', 'Django'],
+  },
+  {
+    title: 'Cloud & DevOps',
+    items: ['AWS (EKS)', 'Kubernetes', 'Docker', 'Terraform', 'GitHub Actions', 'GitOps', 'Vercel', 'Cloudflare', 'Supabase'],
+  },
+  {
+    title: 'Data & Infrastructure',
+    items: ['PostgreSQL', 'Redis', 'Elasticsearch', 'RabbitMQ', 'Prometheus', 'GraphQL', 'REST', 'Caddy'],
+  },
+  {
+    title: 'AI & Practices',
+    items: ['Claude Code', 'Agentic workflows', 'Claude API', 'MCP', 'Prompt engineering', 'Feature flags', 'Statsig'],
+  },
+];
+---
+
+<Base title="Jorge R. Gonzalez — Engineering Leader">
+  <section class="hero">
+    <p class="eyebrow"><span class="dot"></span>Engineering Leader · New York City</p>
+    <h1>I turn hard problems into shipped software.</h1>
+    <p class="subtitle">
+      Engineering leader with 8+ years building in regulated, high-stakes industries —
+      finance, government, security, and IT. I partner directly with customers, multiply
+      my teams with agentic AI, and ship side projects on nights and weekends.
+    </p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#work">See what I'm building</a>
+      <a class="btn" href="https://github.com/jorgegonzalez" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/7cf303464fb4/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </section>
+
+  <section id="work" class="block">
+    <h2 class="section-label">Now</h2>
+    <div class="now-list">
+      {
+        now.map((item) => (
+          <a class="now-card" href={item.href} target="_blank" rel="noopener">
+            <div class="now-head">
+              <span class="badge">{item.label}</span>
+              <span class="now-cta">{item.cta} ↗</span>
+            </div>
+            <h3>{item.name}</h3>
+            <p class="now-role">{item.role}</p>
+            <p class="now-blurb">{item.blurb}</p>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="experience" class="block">
+    <h2 class="section-label">Experience</h2>
+    <div class="timeline">
+      {
+        experience.map((job) => (
+          <div class="job">
+            <div class="job-meta">
+              <span class="job-period">{job.period}</span>
+            </div>
+            <div class="job-body">
+              <div class="job-head">
+                <h3>{job.company}</h3>
+                <span class="job-role">{job.role}</span>
+                {job.progression && <span class="job-progression">{job.progression}</span>}
+              </div>
+              <p class="job-blurb">{job.blurb}</p>
+              <div class="tags">
+                {job.stack.map((s) => (
+                  <span class="tag">{s}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <p class="edu">B.S. Computer Science · Florida State University · 2018</p>
+  </section>
+
+  <section id="projects" class="block">
+    <h2 class="section-label">Selected projects</h2>
+    <div class="project-list">
+      {
+        projects.map((p) => {
+          const Tag = p.href ? 'a' : 'div';
+          return (
+            <Tag
+              class:list={['project-card', { static: !p.href }]}
+              href={p.href}
+              target={p.href ? '_blank' : undefined}
+              rel={p.href ? 'noopener' : undefined}
+            >
+              <div class="project-head">
+                <h3>{p.name}</h3>
+                {p.cta && <span class="now-cta">{p.cta} ↗</span>}
+              </div>
+              <p class="project-blurb">{p.blurb}</p>
+              <div class="tags">
+                {p.stack.map((s) => (
+                  <span class="tag">{s}</span>
+                ))}
+              </div>
+            </Tag>
+          );
+        })
+      }
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 class="section-label">Toolbox</h2>
+    <div class="skills">
+      {
+        skills.map((group) => (
+          <div class="skill-group">
+            <h3>{group.title}</h3>
+            <div class="tags">
+              {group.items.map((s) => (
+                <span class="tag">{s}</span>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="contact" class="block contact">
+    <h2>Let's build something.</h2>
+    <p>
+      I'm always up for a conversation about hard engineering problems, high-stakes
+      systems, or where agentic AI is actually going.
+    </p>
+    <div class="hero-actions">
+      <a class="btn primary" href="mailto:jorge@ginyu.io">jorge@ginyu.io</a>
+      <a class="btn" href="https://github.com/jorgegonzalez" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/7cf303464fb4/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 7rem 2rem 4rem;
+    text-align: center;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+    margin-bottom: 1.75rem;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: 2rem;
+    background: var(--surface);
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.15);
+  }
+
+  h1 {
+    font-size: clamp(2.1rem, 6vw, 3.4rem);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0.72));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    line-height: 1.7;
+    color: var(--text-muted);
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2.25rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.65rem 1.15rem;
+    border-radius: 0.6rem;
+    border: 1px solid var(--line-strong);
+    color: rgba(255, 255, 255, 0.85);
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
+  }
+
+  .btn:hover {
+    border-color: rgba(255, 255, 255, 0.35);
+    background: var(--surface-hover);
+    color: #fff;
+  }
+
+  .btn.primary {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+    font-weight: 500;
+  }
+
+  .btn.primary:hover {
+    background: rgba(255, 255, 255, 0.85);
+  }
+
+  /* shared section scaffolding */
+  .block {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+
+  .section-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-faint);
+    margin-bottom: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  /* now / current work */
+  .now-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .now-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  }
+
+  .now-card:hover {
+    border-color: var(--line-strong);
+    background: var(--surface-hover);
+    transform: translateY(-2px);
+  }
+
+  .now-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    letter-spacing: 0.01em;
+  }
+
+  .now-cta {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--text-faint);
+    transition: color 0.2s;
+  }
+
+  .now-card:hover .now-cta,
+  .project-card:hover .now-cta {
+    color: var(--accent);
+  }
+
+  .now-role {
+    font-size: 0.8rem;
+    color: var(--text-faint);
+    margin: 0.25rem 0 0.75rem;
+  }
+
+  .now-blurb {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+
+  /* experience timeline */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .job {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .job:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .job-period {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--text-faint);
+    white-space: nowrap;
+  }
+
+  .job-head {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.85rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .job-role {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .job-progression {
+    font-size: 0.72rem;
+    color: var(--text-faint);
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    padding: 0.1rem 0.55rem;
+  }
+
+  .job-blurb {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin-bottom: 0.85rem;
+  }
+
+  .edu {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.82rem;
+    color: var(--text-faint);
+  }
+
+  /* tags */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tag {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    padding: 0.2rem 0.55rem;
+    border: 1px solid var(--line);
+    border-radius: 0.4rem;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  /* projects */
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project-card {
+    display: block;
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .project-card:not(.static):hover {
+    border-color: var(--line-strong);
+    background: var(--surface-hover);
+  }
+
+  .project-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .project-blurb {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin-bottom: 0.85rem;
+  }
+
+  /* skills */
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+  }
+
+  .skill-group h3 {
+    font-size: 0.78rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-faint);
+    margin-bottom: 0.85rem;
+  }
+
+  /* contact */
+  .contact {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+
+  .contact h2 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    margin-bottom: 1rem;
+  }
+
+  .contact p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .contact .hero-actions {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 760px) {
+    .now-list {
+      grid-template-columns: 1fr;
+    }
+
+    .skills {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      padding: 4.5rem 1.25rem 3rem;
+    }
+
+    .block {
+      padding: 2.5rem 1.25rem;
+    }
+
+    .job {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+  }
+</style>

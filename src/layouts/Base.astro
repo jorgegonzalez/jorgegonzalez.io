@@ -1,0 +1,242 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Jorge R. Gonzalez — engineering leader shipping software in regulated, high-stakes industries, and building side projects with agentic AI.",
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://jorgegonzalez.io" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0a0a0b" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-inner">
+        <a href="/" class="wordmark">
+          <span class="mark">JG</span>
+          <span class="name">Jorge Gonzalez</span>
+        </a>
+        <div class="nav-links">
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="mailto:jorge@ginyu.io">jorge@ginyu.io</a>
+          <a href="https://github.com/jorgegonzalez" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/7cf303464fb4/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="location">📍 New York, NY</p>
+        <p class="copyright">&copy; {new Date().getFullYear()} Jorge R. Gonzalez.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --accent: #6ea8fe;
+    --line: rgba(255, 255, 255, 0.08);
+    --line-strong: rgba(255, 255, 255, 0.15);
+    --surface: rgba(255, 255, 255, 0.03);
+    --surface-hover: rgba(255, 255, 255, 0.05);
+    --text: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.5);
+    --text-faint: rgba(255, 255, 255, 0.3);
+    --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(to bottom, #000000, #111113);
+    background-attachment: fixed;
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+</style>
+
+<style>
+  nav {
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+
+  .nav-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .wordmark {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    border: 1px solid var(--line-strong);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: -0.02em;
+  }
+
+  .name {
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    transition: color 0.2s;
+    font-weight: 400;
+  }
+
+  .nav-links a:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  main {
+    flex: 1;
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 3rem 2rem;
+  }
+
+  .footer-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-links a {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.4);
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .location {
+    font-size: 0.75rem;
+    color: var(--text-faint);
+    margin-bottom: 0.5rem;
+  }
+
+  .copyright {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.2);
+  }
+
+  @media (max-width: 640px) {
+    .nav-inner {
+      padding: 1rem 1.25rem;
+    }
+
+    .name {
+      display: none;
+    }
+
+    .nav-links {
+      gap: 1.25rem;
+    }
+
+    .nav-links a {
+      font-size: 0.8rem;
+    }
+
+    footer {
+      padding: 2rem 1.25rem;
+    }
+
+    .footer-links {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  }
+</style>
