@@ -37,42 +37,38 @@ const experience = [
     role: 'Engineering Lead',
     progression: 'Senior → Principal → Lead',
     period: '2022 — Present',
-    blurb:
-      'Built App Builder from concept to GA as sole engineer, designer, and PM, then grew into org-wide technical leadership. Own production reliability across Postgres and Redis, lead the Terraform migration across regions, and ship customer-facing features on a React/TypeScript + Python stack.',
-    stack: ['React', 'TypeScript', 'Python', 'Postgres', 'Redis', 'Terraform'],
+    stack: ['React', 'TypeScript', 'Node.js', 'Python', 'Go', 'Postgres', 'Redis', 'Kafka', 'RabbitMQ', 'Terraform', 'EKS'],
   },
   {
     company: 'Walmart Global Tech',
     role: 'Software Engineer 3',
     period: '2022',
-    blurb:
-      'Built Interactive Voice Response and chatbot services in F#, using Google DialogFlow CX and the Microsoft Bot Framework.',
-    stack: ['F#', 'DialogFlow CX', 'Bot Framework'],
+    stack: ['F#', '.NET'],
   },
   {
     company: 'Raft',
     role: 'Full Stack Engineer',
     period: '2021 — 2022',
-    blurb:
-      'Shipped features for a React/Django government data submission platform and architected a multi-environment Terraform pipeline to Cloud Foundry.',
-    stack: ['React', 'Django', 'Terraform', 'Cloud Foundry'],
+    stack: ['React', 'Django', 'Node.js', 'Postgres', 'Terraform'],
   },
   {
     company: 'Perch Security',
     role: 'Software Engineer',
     progression: 'Acquired by ConnectWise',
     period: '2020 — 2021',
-    blurb:
-      'Built 20+ third-party API integrations for a security platform — effectively doubling available integrations — plus a native .NET logging integration published to the partner marketplace.',
-    stack: ['Node.js', 'Kafka', 'Django', 'React', '.NET'],
+    stack: ['Node.js', 'Kafka', 'Django', 'React', 'Elasticsearch', 'Kibana'],
   },
   {
     company: 'JPMorgan Chase',
     role: 'Software Engineer I, II',
     period: '2018 — 2020',
-    blurb:
-      'Built a data visualization platform for historical usage analytics of financial products with React, Redux, Apollo GraphQL, and Express.',
-    stack: ['React', 'Redux', 'Apollo GraphQL', 'Express'],
+    stack: ['Java', 'React', 'Redux', 'Apollo GraphQL', 'Express', 'Node.js', 'Kafka'],
+  },
+  {
+    company: 'JPMorgan Chase',
+    role: 'Software Engineering Intern',
+    period: 'Summer 2017',
+    stack: ['Java', 'Spring Boot', 'React'],
   },
 ];
 
@@ -106,19 +102,11 @@ const projects = [
 const skills = [
   {
     title: 'Languages & Frameworks',
-    items: ['TypeScript', 'Python', 'JavaScript', 'Ruby / Rails', 'Swift / SwiftUI', 'F#', 'Go', 'React', 'Node.js', 'Django'],
+    items: ['TypeScript', 'Python', 'JavaScript', 'Ruby / Rails', 'Swift / SwiftUI', 'Kotlin', 'Java', 'F#', 'Go', 'React', 'Electron', 'Node.js', 'Bun', 'Django'],
   },
   {
-    title: 'Cloud & DevOps',
-    items: ['AWS (EKS)', 'Kubernetes', 'Docker', 'Terraform', 'GitHub Actions', 'GitOps', 'Vercel', 'Cloudflare', 'Supabase'],
-  },
-  {
-    title: 'Data & Infrastructure',
-    items: ['PostgreSQL', 'Redis', 'Elasticsearch', 'RabbitMQ', 'Prometheus', 'GraphQL', 'REST', 'Caddy'],
-  },
-  {
-    title: 'AI & Practices',
-    items: ['Claude Code', 'Agentic workflows', 'Claude API', 'MCP', 'Prompt engineering', 'Feature flags', 'Statsig'],
+    title: 'Infrastructure & Data',
+    items: ['AWS', 'Kubernetes', 'Docker', 'Terraform', 'GitHub Actions', 'GitOps', 'Vercel', 'Cloudflare', 'PostgreSQL', 'Redis', 'Kafka', 'RabbitMQ', 'Elasticsearch', 'Logstash', 'Kibana', 'Prometheus', 'GraphQL', 'REST', 'Supabase', 'Stripe', 'Caddy', 'LaunchDarkly', 'Statsig'],
   },
 ];
 ---
@@ -128,18 +116,19 @@ const skills = [
     <p class="eyebrow"><span class="dot"></span>Engineering Leader · New York City</p>
     <h1>I turn hard problems into shipped software.</h1>
     <p class="subtitle">
-      Engineering leader with 8+ years building in regulated, high-stakes industries —
-      finance, government, security, and IT. I partner directly with customers, multiply
-      my teams with agentic AI, and ship side projects on nights and weekends.
+      Generalist engineering leader with 8+ years building in regulated, high-stakes industries —
+      finance, government, security, and IT. I do my best work with startups and early-stage
+      teams — partnering directly with customers, multiplying my team with agentic coding
+      tools like Claude Code, and shipping side projects on nights and weekends.
     </p>
     <div class="hero-actions">
       <a class="btn primary" href="#work">See what I'm building</a>
-      <a class="btn" href="https://github.com/jorgegonzalez" target="_blank" rel="noopener">GitHub ↗</a>
-      <a class="btn" href="https://www.linkedin.com/in/7cf303464fb4/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/jorgegonzalez" target="_blank" rel="noopener">GitHub<span class="arr">↗</span></a>
+      <a class="btn" href="https://www.linkedin.com/in/7cf303464fb4/" target="_blank" rel="noopener">LinkedIn<span class="arr">↗</span></a>
     </div>
   </section>
 
-  <section id="work" class="block">
+  <section id="work" class="block block--wide">
     <h2 class="section-label">Now</h2>
     <div class="now-list">
       {
@@ -147,7 +136,7 @@ const skills = [
           <a class="now-card" href={item.href} target="_blank" rel="noopener">
             <div class="now-head">
               <span class="badge">{item.label}</span>
-              <span class="now-cta">{item.cta} ↗</span>
+              <span class="now-cta">{item.cta}<span class="arr">↗</span></span>
             </div>
             <h3>{item.name}</h3>
             <p class="now-role">{item.role}</p>
@@ -173,7 +162,6 @@ const skills = [
                 <span class="job-role">{job.role}</span>
                 {job.progression && <span class="job-progression">{job.progression}</span>}
               </div>
-              <p class="job-blurb">{job.blurb}</p>
               <div class="tags">
                 {job.stack.map((s) => (
                   <span class="tag">{s}</span>
@@ -184,7 +172,7 @@ const skills = [
         ))
       }
     </div>
-    <p class="edu">B.S. Computer Science · Florida State University · 2018</p>
+    <p class="edu">Bachelor of Science in Computer Science · 2018</p>
   </section>
 
   <section id="projects" class="block">
@@ -202,7 +190,7 @@ const skills = [
             >
               <div class="project-head">
                 <h3>{p.name}</h3>
-                {p.cta && <span class="now-cta">{p.cta} ↗</span>}
+                {p.cta && <span class="now-cta">{p.cta}<span class="arr">↗</span></span>}
               </div>
               <p class="project-blurb">{p.blurb}</p>
               <div class="tags">
@@ -243,8 +231,8 @@ const skills = [
     </p>
     <div class="hero-actions">
       <a class="btn primary" href="mailto:jorge@ginyu.io">jorge@ginyu.io</a>
-      <a class="btn" href="https://github.com/jorgegonzalez" target="_blank" rel="noopener">GitHub ↗</a>
-      <a class="btn" href="https://www.linkedin.com/in/7cf303464fb4/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/jorgegonzalez" target="_blank" rel="noopener">GitHub<span class="arr">↗</span></a>
+      <a class="btn" href="https://www.linkedin.com/in/7cf303464fb4/" target="_blank" rel="noopener">LinkedIn<span class="arr">↗</span></a>
     </div>
   </section>
 </Base>
@@ -340,6 +328,23 @@ const skills = [
     padding: 3rem 2rem;
   }
 
+  .block--wide {
+    max-width: 1000px;
+  }
+
+  /* small trailing "open in new tab" arrow */
+  .arr {
+    display: inline-block;
+    font-size: 0.7em;
+    margin-left: 0.3em;
+    transform: translateY(-0.05em);
+    opacity: 0.7;
+  }
+
+  .btn .arr {
+    opacity: 0.55;
+  }
+
   .section-label {
     font-size: 0.8rem;
     font-weight: 500;
@@ -400,6 +405,7 @@ const skills = [
     font-size: 0.72rem;
     color: var(--text-faint);
     transition: color 0.2s;
+    white-space: nowrap;
   }
 
   .now-card:hover .now-cta,
@@ -466,13 +472,6 @@ const skills = [
     padding: 0.1rem 0.55rem;
   }
 
-  .job-blurb {
-    font-size: 0.9rem;
-    line-height: 1.65;
-    color: var(--text-muted);
-    margin-bottom: 0.85rem;
-  }
-
   .edu {
     margin-top: 1.5rem;
     padding-top: 1.5rem;
@@ -536,9 +535,9 @@ const skills = [
 
   /* skills */
   .skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .skill-group h3 {
